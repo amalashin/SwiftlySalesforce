@@ -9,46 +9,46 @@
 import Foundation
 
 public struct ObjectPicklistValue: Codable {
-    var label: String
-    var validFor: String?
-    var value: String
+    public var label: String
+    public var validFor: String?
+    public var value: String
 }
 
 public struct ObjectLayoutComponentDetails: Codable {
-    var inlineHelpText: String?
-    var label: String
-    var name: String
-    var controllerName: String?
-    var picklistValues: [ObjectPicklistValue]
+    public var inlineHelpText: String?
+    public var label: String
+    public var name: String
+    public var controllerName: String?
+    public var picklistValues: [ObjectPicklistValue]
 }
 
 public struct ObjectLayoutComponent: Codable {
-    var type: String
-    var value: String?
-    var details: ObjectLayoutComponentDetails?
+    public var type: String
+    public var value: String?
+    public var details: ObjectLayoutComponentDetails?
 }
 
 public struct ObjectLayoutItem: Codable {
-    var label: String
-    var required: Bool
-    var layoutComponents: [ObjectLayoutComponent]
+    public var label: String
+    public var required: Bool
+    public var layoutComponents: [ObjectLayoutComponent]
 }
 
 public struct ObjectLayoutRow: Codable {
-    var numItems: Int
-    var layoutItems: [ObjectLayoutItem]
+    public var numItems: Int
+    public var layoutItems: [ObjectLayoutItem]
 }
 
 public struct ObjectLayoutSection: Codable {
-    var layoutSectionId: String
-    var parentLayoutId: String
-    var rows: Int
-    var heading: String
-    var columns: Int
-    var layoutRows: [ObjectLayoutRow]
+    public var layoutSectionId: String
+    public var parentLayoutId: String
+    public var rows: Int
+    public var heading: String
+    public var columns: Int
+    public var layoutRows: [ObjectLayoutRow]
 }
 
 public struct ObjectLayout: Codable {
-    var id: String
-    var detailLayoutSections: [ObjectLayoutSection]
+    public var id: String
+    public var detailLayoutSections: [ObjectLayoutSection]
 }
